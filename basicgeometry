@@ -1,0 +1,13 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220); //define colour
+  rect(300,300,25,75);
+  ellipse(200,200,300);
+  arc(50, 50, 80, 80, 0, PI + QUARTER_PI, CHORD);
+  line(0,0,400,400);
+  line(400,0,0,400);
+  rect(100,100,30,40); // the last object appears at front
+}
