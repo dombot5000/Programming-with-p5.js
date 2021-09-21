@@ -1,0 +1,22 @@
+// Random - flashing blobs
+// by Dom Baker
+// dombot5000
+// this code is based on tutorials from http://thecodingtrain.com
+// 
+
+
+function setup() { //function happens only once at start to create the canvas
+  createCanvas(400, 400);
+  background(0); //by putting backgroun in setup it the background become a chalkboard
+}
+
+function draw() { //draw is in a loop
+  //background(0); //define colour using RGB
+  noStroke();
+  fill(random(0,255),random(0,255), random(0,255), 50) //changes the colours constantly RGB
+  ellipse(mouseX, mouseY, random(1,40)); // use random to change circle size
+}
+
+function mousePressed() { //when clicked it resets to a blank canvas
+  background(0); 
+}
