@@ -1,0 +1,32 @@
+// Create Variable
+// by Dom Baker
+// dombot5000
+// this code is based on tutorials from http://thecodingtrain.com
+// Declare Initialise Use
+
+let circleX = 100; // put variables outside setup so they are global
+let circleY = 50
+let circleS = 20
+
+function setup() { //function happens only once at start to create the canvas
+  createCanvas(400, 400);
+  //circleX = 100; // assignment operation can be done in setup but wont be global
+  background(0); //by putting backgroun in setup it the background become a chalkboard
+}
+
+
+function draw() { //draw is in a loop
+  //background(0); //define colour using RGB
+  noStroke();
+  fill(255, 50) //50 add opacity to the line being drawn
+  //fill(mouseY) //colour of object changes with mouseY position
+  ellipse(circleX, circleY, circleS); // mouseX Y makes the object follow the mouse
+  circleX = circleX + 0.4 // assignment operation right hand sign evaluated
+  //makes x of ellipse move
+  circleY = circleY + 0.4 // makes Y of ellipse move
+  circleS = circleS + 0.1 // makes ellipse grow
+}
+
+function mousePressed() { //when clicked it resets to a blank canvas
+  background(0); 
+}
