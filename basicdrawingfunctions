@@ -1,0 +1,21 @@
+// Basic Functions
+// by Dom Baker
+// dombot5000
+// this code is based on tutorials from http://thecodingtrain.com
+
+function setup() { //function happens only once at start to create the canvas
+  createCanvas(400, 400);
+  background(0); //by putting backgroun in setup it the background become a chalkboard
+}
+
+function draw() { //draw is in a loop
+  //background(0); //define colour using RGB
+  noStroke();
+  fill(255, 50) //50 add opacity to the line being drawn
+  //fill(mouseY) //colour of object changes with mouseY position
+  ellipse(mouseX, mouseY, 30); // mouseX Y makes the object follow the mouse
+}
+
+function mousePressed() { //when clicked it resets to a blank canvas
+  background(0); 
+}
