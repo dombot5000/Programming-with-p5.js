@@ -1,0 +1,25 @@
+// Random Function
+// by Dom Baker
+// dombot5000
+// this code is based on tutorials from http://thecodingtrain.com
+// 
+
+let squareSize; 
+let lineWidth;
+
+function setup() {
+  createCanvas(400, 400);
+  background(100); //background here means its not drawn each time draw function called
+ // squareSize = random(50, 300); // calling in set up
+ // lineWidth = random(2,10);
+}
+
+
+function draw() { 
+  lineWidth = random(4,28);
+  squareSize = random(50, 100); //  random used here it refreshes many frames per second
+  rectMode(CENTER);
+  strokeWeight(lineWidth);
+  stroke(0, 0, 255,10);
+  fill(0,255,0,10);
+  square(200, 150, squareSize);
