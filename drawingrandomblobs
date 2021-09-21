@@ -1,0 +1,26 @@
+// Drawing Blobs with Random Function
+// by Dom Baker
+// dombot5000
+// this code is based on tutorials from http://thecodingtrain.com
+// 
+
+let x, y; 
+let r, g, b;
+
+function setup() {
+  createCanvas(400, 400);
+  background(0);
+}
+
+
+function draw() { 
+  r = random(0, 255);
+  g = random(255);//getting rid of the 0 achieves same result if random starts at 0
+  b = random(0, 255);
+  x = random(0, 400);
+  y = random(0, 400);
+  noStroke();
+  fill(r, g, b, 50)
+  circle(x, y, 24);
+
+}
