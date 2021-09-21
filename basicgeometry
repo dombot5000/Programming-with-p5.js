@@ -1,13 +1,30 @@
-function setup() {
+// Geometry experimentation
+// by Dom Baker
+// dombot5000
+// this code is based on tutorials from http://thecodingtrain.com
+
+function setup() { //function happens only once at start to create the canvas
   createCanvas(400, 400);
 }
 
-function draw() {
-  background(220); //define colour
-  rect(300,300,25,75);
-  ellipse(200,200,300);
-  arc(50, 50, 80, 80, 0, PI + QUARTER_PI, CHORD);
+function draw() { //draw is in a loop
+  background(200, 150 ,100); //define colour using RGB
+  
+  stroke(0,0,0)
   line(0,0,400,400);
   line(400,0,0,400);
+  fill(255,0,0, 175) //colours the rectangle 4th argument controls opacity
+  
+  stroke(0,255,0);//outline colour
+  strokeWeight(7);//weight of the line
+  rect(300,300,25,75);
+  fill(0,0,255); //colours the subsequent shapes
+  
+  stroke(0,255,0);//outline colour
+  strokeWeight(2);
+  ellipse(200,200,300);
+  
+  fill(100,100,100);
+  arc(50, 50, 80, 80, 0, PI + QUARTER_PI, CHORD);
   rect(100,100,30,40); // the last object appears at front
 }
