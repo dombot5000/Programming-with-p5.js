@@ -1,0 +1,17 @@
+//map function
+//maps width (0-600) of the screen to colour of background
+//using mouse x position
+
+var col = 0
+
+function setup() {
+  createCanvas(600, 600);
+}
+
+function draw() {
+  //col = mouseX //calls col variable and x changes colour 0-255
+  col = map(mouseX, 0, 600, 0, 255) // canvas width + RGB
+  background(col);
+  fill(250, 118, 222);
+  ellipse(mouseX, 200, 64, 64);
+}
