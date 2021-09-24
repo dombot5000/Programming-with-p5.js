@@ -1,0 +1,44 @@
+//Boolean variables
+//mouseIsPressed Boolean variable
+// event is the function is mousepressed - all the time it is pressed
+// var is boolean mouseisPressed is the moment it clicks
+
+var on = false
+
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  
+  if (on) {
+    background(0, 255, 0);
+   } else {
+     background(0);
+   }
+  
+  stroke(255);
+  strokeWeight(4);
+  noFill();
+   if(mouseX > 250 && mouseX < 350) { 
+    fill(255, 0, 200);
+   }
+  rectMode(CENTER);
+  rect(300, 200, 100, 100);
+}
+
+function mousePressed() {
+      if(mouseX > 250 && mouseX < 350) {  //clicks on if within x parameter
+     //inside the other if statement only applies when mouse is in square
+      
+      on = !on;  // if its on turn if off, otherwise turn it on
+        
+     // if (on) { // another way of doing it
+     //   on = false;
+     // } else {
+     //   on = true; //if its on turn if off, otherwise turn it on
+      
+      }
+//  on = true  //this alone will turn on but not off
+
+}
