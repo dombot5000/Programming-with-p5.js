@@ -1,0 +1,45 @@
+// constructor classes 2
+
+let bubble1;
+let bubble2;
+let bubble3;
+
+function setup() {
+  createCanvas(400, 400);
+  bubble1 = new Bubble(200, 200, 40); //add arguments to bubble to tailor each one
+  bubble2 = new Bubble(250, 175, 12);
+  bubble3 = new Bubble(150, 150, 1);
+  print(bubble1.x, bubble1.y)
+}
+
+function draw() {
+  background(0);
+  bubble1.move();
+  bubble1.show();
+  bubble2.move();
+  bubble2.show();
+  bubble3.move();
+  bubble3.show();
+
+}
+
+class Bubble {
+  
+  constructor(tempX, tempY, tempR) { //dont have to say function in classes
+    this.x = tempX;
+    this.y = tempY;
+    this.r = tempR;
+  }
+  move(){
+   this.x = this.x + random(-2, 2);
+   this.y = this.y + random(-2, 2);
+  }
+  
+  show() {
+    stroke(255);
+    strokeWeight(4);
+    fill(255, 200, 143);
+    ellipse(this.x, this.y, this.r*2);
+    
+  }
+}
