@@ -1,0 +1,29 @@
+//How to get a function to return a value
+
+function setup() {
+var km = milesToKm(26.3)
+print(km);  
+var km2 = milesToKm(100)
+print(km2)
+var stone = poundsToStone(190)
+print(stone)
+
+  createCanvas(400, 400);
+  var angle = degrees(PI/2);
+  print(angle);
+}
+
+function milesToKm(miles) {
+  var km = miles *1.6;
+ return km;
+}
+
+function poundsToStone(pounds) {
+  var stone = pounds *0.0714286;
+  return stone;
+}
+
+function draw() {
+ 
+
+}
