@@ -1,0 +1,29 @@
+//loops
+// event is the function is mousepressed - all the time it is pressed
+
+//var x = 0; //declared as global usually BUT
+//in this instance use a local variable as below
+
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+    background(0);
+    stroke(255);
+    strokeWeight(4);
+
+//    ellipse(0, 200, 25, 25); //call each ellipse individually OR
+//    ellipse(50, 200, 25, 25);
+//    ellipse(100, 200, 25, 25);
+//    ellipse(150, 200, 25, 25);
+//    ellipse(200, 200, 25, 25);
+//    ellipse(250, 200, 25, 25);
+  
+var x = 0;
+while (x < width) {   //while x is less than width - our exist condition
+     ellipse(x, 200, 25, 25); //starts at 50
+    x = x + 50; // loops in 50 implements
+     } 
+  
+}
