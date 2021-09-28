@@ -1,0 +1,30 @@
+//var nums = [100, 25, 12, 72]; //create array
+
+var words = ["pepper", "salt", "vinegar", "chips"]
+var index = 0;
+
+var num = 23;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(0);
+  fill(255);
+  textSize(42);
+  text(words[index], 12, 120);
+  
+//  ellipse(100, 200, num, num);
+  
+//  ellipse(200, 200, nums[2], nums[2]);//calls third number in array
+
+}
+
+function mousePressed() {
+  index = index + 1; //when clicked go up one place in the array
+  
+  if (index == words.length) { //does this equal the length of the array
+    index = 0
+  }
+}
